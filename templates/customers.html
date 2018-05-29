@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="row">
+    <div class="col-xs-12">
+        <h2>{{users_count}} Customers</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">D.O.B</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                {% for user in users %}
+                <tr>
+                    <td><a href="{{url_for('view_customer', id=user.id)}}">{{user.first_name+" "+user.last_name}}</a></td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.phone_number}}</td>
+                    <td>
+                        {% if user.gender == 1 %}
+                            Female
+                        {% else %}
+                            Male
+                        {% endif %}
+                    </td>
+                    <td>{{user.dob}}</td>
+                </tr>
+                {% endfor %}
+            
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
