@@ -5,13 +5,37 @@
         <h2>Algorithms</h2>
         
         <form class="form-horizontal" role="form" action="{{ url_for('my_algorithms')}}" method="POST">
+        	<div class="form-group">
+                <label for="str_algo" class="control-label col-sm-1"></label>
+                
+                <div class="col-sm-10">
+                	<code>
+                		<p>def duplicate_string(my_string):<p>&nbsp; &nbsp; my_dict = {}</p><p>&nbsp; &nbsp; string_status = 'All Unique'</p><p>&nbsp; &nbsp; for c in my_string:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; if c in my_dict:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; my_dict[c] = my_dict[c]+1</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; string_status = 'Duplicate Found'</p><p>&nbsp; &nbsp; &nbsp; &nbsp; else:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; my_dict[c] = 1</p><p>&nbsp; &nbsp; return string_status</p></p>
+
+					</code>
+                </div>
+                <div class="col-sm-1">
+                </div>
+            </div>
             <div class="form-group">
                 <label for="my_string" class="control-label col-sm-3">String Checker:</label>
+
                 <div class="col-sm-4">
                 	<input type="text" class="form-control" id="my_string" name="my_string" />
                 </div>
                 <div class="col-sm-4">
                 	{{string_check | safe}}
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="fact_algo" class="control-label col-sm-1"></label>
+                
+                <div class="col-sm-10">
+                	<code>
+                		<p>def factorization(my_number, prime_factors):<p>&nbsp; &nbsp; while my_number % 2 == 0:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; prime_factors.append(2)</p><p>&nbsp; &nbsp; &nbsp; &nbsp; my_number = int(my_number/2)</p><p>&nbsp; &nbsp; for i in range(3, my_number,2):</p><p>&nbsp; &nbsp; &nbsp; &nbsp; while my_number % i == 0:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; prime_factors.append(i)</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; my_number = int(my_number/i)</p><p>&nbsp; &nbsp; return(prime_factors)</p></p>
+					</code>
+                </div>
+                <div class="col-sm-1">
                 </div>
             </div>
             <div class="form-group">
